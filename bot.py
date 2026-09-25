@@ -483,7 +483,7 @@ async def log_primary_purchase(uid, country, price, amount, year, qty):
                f"{P_CAL} Yᴇᴀʀ: {year}\n"
                f"{P_PKG} Qᴜᴀɴᴛɪᴛʏ: {qty}\n"
                f"{P_TIME} Tɪᴍᴇ: {t}")
-        try: await bot.send_message(LOG_CHANNEL_ID, msg)
+        try: await bot.send_message(LOOG_CHANNEL_ID, msg)
         except: pass
     except Exception as e: logger.error(f"Pur Log Err: {e}")
 
