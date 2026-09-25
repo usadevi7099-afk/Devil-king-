@@ -474,7 +474,7 @@ async def log_primary_purchase(uid, country, price, amount, year, qty):
     try:
         t = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         msg = (f"{PE_LIGHTNING} <b>NEW PURCHASE SUCCESSFUL</b>\n\n"
-               f"{P_ID} Order ID: <code>{order_id}</code>\n\n"
+               
                f'{P_ID} Uꜱᴇʀ Iᴅ: <code>*****{str(uid)[-5:]}</code>\n'
                f"{P_GLOBE} Cᴏᴜɴᴛʀʏ: {country}\n"
                f"{P_MONEY} Pʀɪᴄᴇ: {P_INR}{price}\n"
