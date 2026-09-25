@@ -934,7 +934,7 @@ async def process_bulk_sessions(event, uid, qty, state, final_cost):
     f"{P_FLAG} Country: {country}\n"
     f"{P_PKG} Quantity: {qty}\n"
     f"{P_CARD} Total Paid: {P_INR}{final_cost}\n"
-    f"🔐 2FA:2007\n\n"
+    f"{P_2FA} 2FA: 2007\n\n"
     f"<i>(Note: Sessions are safely provided, the bot does not keep them active)</i>" )
 
         await bot.send_file(uid, zip_name, caption=caption)
