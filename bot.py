@@ -928,7 +928,7 @@ async def process_bulk_sessions(event, uid, qty, state, final_cost):
             numbers_txt += "\n\nPurchased from @Vinnutgsales\n"
             zf.writestr("numbers.txt", numbers_txt)
             
-        caption = f"{PE_GIFT} <b>Bulk Purchase Successful!</b>\n\n{P_FLAG} Country: {country}\n{P_PKG} Quantity: {qty}\n{P_CARD} Total Paid: {P_INR}{final_cost}\n\n<i>(Note: Sessions are safely provided, the bot does not keep them active)</i>"
+        caption = f"{PE_GIFT} <b>Bulk Purchase Successful!</b>\n\n{P_FLAG} Country: {country}\n{P_PKG} Quantity: {qty}\n{P_CARD} Total Paid: {P_INR}{final_cost}\n f"{twofa_text}")\n\n<i>(Note: Sessions are safely provided, the bot does not keep them active)</i>"
         await bot.send_file(uid, zip_name, caption=caption)
         await log_primary_purchase(uid, country, price, final_cost, year, qty)
     except Exception as e: await event.respond(f"{P_WARN} Error creating zip: {e}")
